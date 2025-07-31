@@ -5,7 +5,7 @@ import pickle
 from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
-head = load_model('head_model.keras')
+head = load_model('1_split_model.keras')
 
 @app.route('/predict', methods=['POST'])
 def predict():

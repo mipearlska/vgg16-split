@@ -6,6 +6,7 @@ import pickle
 import numpy as np
 from tensorflow import keras
 
+
 # Prepare input
 # Model / data parameters
 num_classes = 10
@@ -38,5 +39,10 @@ response = requests.post('http://localhost:5001/predict', data=data, headers={'C
 if response.ok:
     pred = pickle.loads(response.content)
     print("Prediction shape:", pred.shape)
+
+    with open("slice2_input.pkl", "wb") as f:
+        pickle.dump(pred, f)
+        print("Prediction saved to 'slice2_input.pkl'")
+
 else:
     print("Error:", response.text)

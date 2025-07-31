@@ -5,7 +5,7 @@ import pickle
 from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
-head = load_model('1_split_model.keras')
+head = load_model('split2.keras')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -20,4 +20,4 @@ def predict():
         return Response(str(e), status=500)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=5002)

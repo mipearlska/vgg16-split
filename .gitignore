@@ -1,0 +1,15 @@
+# Ignore virtual environments
+keras-env/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore logs and environment files
+*.log
+.env
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+mnist_data.pkl

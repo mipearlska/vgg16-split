@@ -3,10 +3,6 @@ import numpy as np
 import requests
 import pickle
 
-import numpy as np
-from tensorflow import keras
-
-
 # The data, split between train and test sets
 with open("slice2_input.pkl", "rb") as f:
     input = pickle.load(f)

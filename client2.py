@@ -11,7 +11,7 @@ with open("slice2_input.pkl", "rb") as f:
 data = pickle.dumps(input)
 
 # Send POST request with binary data
-response = requests.post('http://localhost:5002/predict', data=data, headers={'Content-Type': 'application/octet-stream'})
+response = requests.post('http://192.168.122.110:30002/predict', data=data, headers={'Content-Type': 'application/octet-stream'})
 
 # Deserialize the prediction
 if response.ok:

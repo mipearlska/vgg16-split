@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: split2-deployment
+  labels:
+    app: split2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: split2
+  template:
+    metadata:
+      labels:
+        app: split2
+    spec:
+      containers:
+      - name: split2-container
+        image: mipearlska/vgg16split2:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5002

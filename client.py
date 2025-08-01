@@ -29,7 +29,7 @@ tst = np.expand_dims(x_test[0], 0)
 data = pickle.dumps(tst)
 
 # Send POST request with binary data
-response = requests.post('http://localhost:5001/predict', data=data, headers={'Content-Type': 'application/octet-stream'})
+response = requests.post('http://192.168.122.11:30001/predict', data=data, headers={'Content-Type': 'application/octet-stream'})
 
 # Deserialize the prediction
 if response.ok:

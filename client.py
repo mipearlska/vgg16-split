@@ -33,12 +33,14 @@ response = requests.post('http://192.168.122.11:30001/predict', data=data, heade
 
 # Deserialize the prediction
 if response.ok:
-    pred = pickle.loads(response.content)
-    print("Prediction shape:", pred.shape)
+    # pred = pickle.loads(response.content)
+    # print("Prediction shape:", pred.shape)
 
-    with open("slice2_input.pkl", "wb") as f:
-        pickle.dump(pred, f)
-        print("Prediction saved to 'slice2_input.pkl'")
+    # with open("slice2_input.pkl", "wb") as f:
+    #     pickle.dump(pred, f)
+    #     print("Prediction saved to 'slice2_input.pkl'")
+
+    print("OK")
 
 else:
     print("Error:", response.text)
